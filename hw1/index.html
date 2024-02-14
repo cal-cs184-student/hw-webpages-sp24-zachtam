@@ -36,6 +36,8 @@
 
 <h2 align="middle">Section I: Rasterization</h2>
 
+<h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
+
 <p>
 To rasterize triangles, we first get the bounding box of the triangle by computing the min/max x/y coordinates of the corners. We use the floor function to get the values in pixel coordinates. Then, we compute the winding direction of the triangle by checking if P2 is to the left of the line from P0 to P1. If this is not the case, the triangle is wound clockwise, and we swap P1 and P2 so the resulting triangle is wound counterclockwise.
 </p>
@@ -47,8 +49,6 @@ Then, we iterate through the bounding box in pixel coordinates. For each of thes
 <p>
 This algorithm is no worse than one that checks every point within the bounding box of the triangle because it is that algorithm! It checks every point within the bounding box of the triangle.
 </p>
-
-<h3 align="middle">Part 1: Rasterizing single-color triangles</h3>
 
 <div align="middle">
   <img src="images/1.1.png" align="middle" width="400px"/>
@@ -73,15 +73,15 @@ This algorithm is no worse than one that checks every point within the bounding 
   <table style="width=100%">
     <tr>
       <td>
-        <img src="images/2.1.png" align="middle" width="400px"/>
+        <img src="images/2.1.png" align="middle" width="300px"/>
         <figcaption align="middle">Supersampling 1x</figcaption>
       </td>
       <td>
-        <img src="images/2.2.png" align="middle" width="420px"/>
+        <img src="images/2.2.png" align="middle" width="315px"/>
         <figcaption align="middle">Supersampling 4x</figcaption>
       </td>
       <td>
-        <img src="images/2.3.png" align="middle" width="410px"/>
+        <img src="images/2.3.png" align="middle" width="308px"/>
         <figcaption align="middle">Supersampling 16x</figcaption>
       </td>
     </tr>
